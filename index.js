@@ -83,10 +83,15 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 /* 🏡  Refactor your `variableInterestRate()` function to accept an array of interest rates (make sure to copy and paste as to not lose your work!) */
 
 var monthlyRate = 0;
-var name = "Emily";
+const name = "Emily";
+const months = 12;
+// let name = prompt("What is your name?");
+// let p = prompt("What is the principal amount?");
+// let interest = prompt("What is the interest?");
+// let years = prompt("How many years is your loan?");
+// let credit = prompt("What is your credit score?");
 
 function mortgageCalculator(p, interest, years){
-    var months = 12;
     var monthlyInterestRate = interest / months;
     var periods = years*months;
     var finance = Math.pow(1 + monthlyInterestRate, periods);
@@ -107,7 +112,6 @@ function variableInterestRate(p, interest, years, credit){
         else if (credit < 660){
             interest = interest + 0.005;
         }
-        var months = 12;
         var monthlyInterestRate = interest / months;
         var periods = years*months;
         var finance = Math.pow(1 + monthlyInterestRate, periods);
